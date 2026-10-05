@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/app/lib/paths";
 
 export type InnovationCardProps = {
   boldText: string;
@@ -56,7 +57,7 @@ export default function InnovationCard({
       </div>
 
       <div className="relative mt-1 aspect-[366/192] w-full shrink-0">
-        <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+        <Image src={assetPath(imageSrc)} alt={imageAlt} fill className="object-cover" />
         <span className="absolute left-1/2 top-1/2 flex size-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md lg:size-10">
           {linkIcon === "play" ? (
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="ml-0.5 size-4 text-[#F00012]">
