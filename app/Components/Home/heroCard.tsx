@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/app/lib/paths";
 
 export type HeroCardProps = {
   title: string;
@@ -22,7 +23,7 @@ export default function HeroCard({
     <>
       <div className="relative aspect-356/176 w-full shrink-0 overflow-hidden lg:aspect-auto lg:w-[122px]">
         <Image
-          src={imageSrc}
+          src={assetPath(imageSrc)}
           alt={imageAlt}
           fill
           sizes="(min-width: 1024px) 728px, (max-width: 400px) 100vw, 358px"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/app/lib/paths";
 
 export type ServiceHighlightCardProps = {
   imageSrc: string;
@@ -21,7 +22,7 @@ export default function ServiceHighlightCard({
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-xl border border-[#F2D6D6] bg-white">
       <div className="relative aspect-[366/256] w-full shrink-0">
-        <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+        <Image src={assetPath(imageSrc)} alt={imageAlt} fill className="object-cover" />
       </div>
       <div className="flex flex-1 flex-col items-start px-6 py-6">
         <h3 className="text-base font-bold text-[#0A0A0A] lg:text-[18px]">

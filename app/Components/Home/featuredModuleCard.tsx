@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/app/lib/paths";
 
 export type FeaturedModuleTag = {
   icon: "calendar" | "video" | "lab";
@@ -50,7 +51,7 @@ export default function FeaturedModuleCard({
     <div className="overflow-hidden rounded-2xl border border-[#F2D6D6] bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,420px)_1fr]">
         <div className="relative aspect-[479/300] w-full">
-          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+          <Image src={assetPath(imageSrc)} alt={imageAlt} fill className="object-cover" />
           <span className="absolute left-3 top-3 inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#0A0A0A] shadow-sm">
             <span className="size-1.5 shrink-0 rounded-full bg-[#F00012]" />
             {badgeLabel}

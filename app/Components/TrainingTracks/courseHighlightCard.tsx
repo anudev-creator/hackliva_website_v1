@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/app/lib/paths";
 
 export type CourseHighlightCardProps = {
   heading: string;
@@ -52,7 +53,7 @@ export default function CourseHighlightCard({
           <div className="flex flex-col items-center justify-center rounded-2xl border border-[#F2D6D6] bg-white px-6 py-10 text-center lg:p-[33px]">
             <span className="flex size-16 items-center justify-center rounded-full border border-[#F2D6D6]">
               <Image
-                src="/TrainingTracks/course-details-icon.png"
+                src={assetPath("/TrainingTracks/course-details-icon.png")}
                 alt=""
                 width={32}
                 height={32}
@@ -72,7 +73,7 @@ export default function CourseHighlightCard({
           <div className="flex flex-col items-center justify-center rounded-2xl border border-[#F2D6D6] bg-white px-6 py-10 text-center lg:p-[33px]">
             <span className="flex size-16 items-center justify-center overflow-hidden rounded-full border border-[#F2D6D6]">
               <Image
-                src="/TrainingTracks/ai-brain-icon.jpg"
+                src={assetPath("/TrainingTracks/ai-brain-icon.jpg")}
                 alt=""
                 width={40}
                 height={40}
@@ -91,7 +92,7 @@ export default function CourseHighlightCard({
 
           <div className="flex items-start gap-4 rounded-2xl border border-[#F2D6D6] bg-white p-6 lg:col-span-2 lg:p-[25px]">
             <Image
-              src="/TrainingTracks/mentor-icon.svg"
+              src={assetPath("/TrainingTracks/mentor-icon.svg")}
               alt=""
               width={18}
               height={25}
@@ -109,7 +110,7 @@ export default function CourseHighlightCard({
 
           <div className="flex items-start gap-4 rounded-2xl border border-[#F2D6D6] bg-white p-6 lg:col-span-2 lg:p-[25px]">
             <Image
-              src="/TrainingTracks/labs-icon.svg"
+              src={assetPath("/TrainingTracks/labs-icon.svg")}
               alt=""
               width={19}
               height={25}
